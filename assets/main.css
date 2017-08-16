@@ -3,4 +3,7 @@ body
     background: aqua;
     margin:0;
     padding: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 1000px;
 }
