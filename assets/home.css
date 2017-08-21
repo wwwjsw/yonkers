@@ -1,23 +1,23 @@
-.content_home
-{
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding-top: 100px;
+.introducao{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 100px;
+    z-index: 100;
+    top: 100px;
 }
-.content_home h1{
+.introducao h1{
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
 	font-size: 20px;
 	text-align: center;
 	margin:0 auto;
     display: block;
+    color: #ffffff;
 }
-.content_home a{
-	color: #fff;
-	text-decoration: none;
-}
-.content_home img{
-    margin:0 auto;
-    display: block;
+.introducao h1 a{
+    color: #ffffff;
+    text-decoration: none;
 }
