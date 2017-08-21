@@ -1,0 +1,41 @@
+.menu{
+    padding-top: 30px;
+    text-align: left;
+}
+.menu .logo{
+    max-width: 100px;
+    padding-bottom: 30px;
+}
+.menu ul li{
+    list-style-type: none;
+    font-size: 13px;
+    font-weight: 400;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+.menu hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100px;
+}
+.menu_superior ul{
+    padding:0px;
+    margin:0px;
+    list-style:none;    
+    text-align: center;
+}
+.menu_superior ul li { 
+    display: inline;
+    font-size: 14px;
+    margin-right: 40px;    
+}
+.inicio_fotos{
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+.camiseta_inicio{
+    display: block;
+    margin: 0 auto;
+}
