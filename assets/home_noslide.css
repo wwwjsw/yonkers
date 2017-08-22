@@ -55,7 +55,9 @@
     transform: scale(1.5);
 }
 .footer_linha hr{
+    margin-top: 0;
     border-color:#000000;
+    width: 960px;
 }
 .footer_form{
     float: left;
@@ -81,4 +83,12 @@
 }
 .footer_form input[type="submit"]:hover{
     color: #999999;
+}
+.footer_scroll{
+    display: block;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    bottom: 0px;
+    background: #fff;
 }
