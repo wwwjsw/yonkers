@@ -46,13 +46,14 @@
 .footer_form{
     float: left;
 }
-.footer_form:first-child{
-    padding-left: 40px;
+.footer_form span{
+    padding-right: 10px;
     font-size: 13px;
 }
 .footer_form input[type="email"]{
     border-radius: 0;
     border-color: #000000;
+    margin-right: 10px;    
 }
 .footer_form input[type="email"]:focus{
     border-color: #666666;
