@@ -40,3 +40,27 @@
     display: block;
     margin: 0 auto;
 }
+.footer_linha hr{
+    border-color:#000000;
+}
+.footer_form{
+    float: left;
+}
+.footer_form:first-child{
+    padding-left: 40px;
+    font-size: 13px;
+}
+.footer_form input[type="email"]{
+    border-radius: 0;
+    border-color: #000000;
+}
+.footer_form input[type="email"]:focus{
+    border-color: #666666;
+}    
+.footer_form input[type="submit"]{
+    border-radius: 0;
+    background-color: #000000;
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 400;
+}
