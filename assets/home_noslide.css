@@ -65,3 +65,6 @@
     color: #ffffff;
     font-weight: 400;
 }
+.footer_form input[type="submit"]:hover{
+    color: #999999;
+}
