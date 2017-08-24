@@ -66,7 +66,7 @@
     width: 960px;
 }
 .footer_form{
-    float: left;
+    text-align: center;
 }
 .footer_form span{
     padding-right: 10px;
@@ -97,4 +97,13 @@
     width: 100%;
     bottom: 0px;
     background: #fff;
+}
+.footer_scroll form{
+    margin-bottom: 0;
+}
+.footer_credit{
+    font-size: 12px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
