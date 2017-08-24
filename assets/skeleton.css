@@ -369,6 +369,10 @@ form {
   float: right; }
 .u-pull-left {
   float: left; }
+.selected {
+  color:#FF0000 !important;}
+.selected::before{
+  content: "- ";}
 
 
 /* Misc
