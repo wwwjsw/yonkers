@@ -1,3 +1,37 @@
 .product{
     padding-top: 50px;
 }
+.product h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 32px;
+}
+.product p{
+    font-size: 25px;
+    color: #8E8E8E;
+}
+.product label{
+    font-size: 15px;
+}
+.product select{
+    width: 100%;
+    border-radius: 0;
+    border: 2px solid #000;
+}
+.product select:focus{
+    border: 2px solid #333;
+}
+.product_cover img{
+    max-width: 340px;
+    display: block;
+    margin: 0 auto;
+}
+.product_thumbnail{
+    display: flex;
+    justify-content: center;
+}
+.product_thumbnail img{
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 10px;
+}
