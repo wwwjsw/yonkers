@@ -5,6 +5,7 @@
     text-transform: uppercase;
     font-weight: 400;
     font-size: 32px;
+    margin-bottom: 0;
 }
 .product p{
     font-size: 25px;
@@ -20,6 +21,18 @@
 }
 .product select:focus{
     border: 2px solid #333;
+}
+.product button{
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    background-color: #FF0000;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.product button:hover{
+    color: #ffcccc;
 }
 .product_cover img{
     max-width: 340px;
