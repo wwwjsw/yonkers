@@ -371,6 +371,8 @@ form {
   float: left; }
 .selected {
   color:#FF0000 !important;}
+.selected a{
+  color: #FF0000 !important;}  
 .selected::before{
   content: "- ";}
 
