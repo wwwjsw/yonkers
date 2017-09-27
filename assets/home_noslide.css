@@ -39,6 +39,9 @@ body > div.container > div > div.three.columns > li > a{
     font-size: 14px;
     margin-right: 40px;    
 }
+#mine-badge{
+    display:none !important;
+}
 .footer_linha hr{
     margin-top: 0;
     border-color:#000000;
