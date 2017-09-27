@@ -1,3 +1,11 @@
 .cart{
-	margin-top: 20px;
+	margin-top: 65px;
+}
+.cart input[type="number"]{
+    border-radius: 0;
+    border-color: #000000;
+}
+.cart a{
+	color:#ff0000;
+	text-decoration:none;
 }
