@@ -19,6 +19,8 @@ body > div.container > div > div.three.columns > li > a{
     text-decoration: none;
     color: #000000;
     text-transform: uppercase;
+    font-weight: normal;
+    font-size: 13px;
 }
 .menu hr{
     margin-top: 1rem;
