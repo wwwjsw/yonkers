@@ -14,6 +14,11 @@
 .menu ul li a{
     text-decoration: none;
     color: #000000;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 0.7em;
+    letter-spacing: 0.1em;
 }
 body > div.container > div > div.three.columns > li > a{
     text-decoration: none;
