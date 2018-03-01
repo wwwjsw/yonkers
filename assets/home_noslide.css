@@ -21,9 +21,9 @@
     letter-spacing: 0.1em;
 }
 .menu_item a{
-    font-weight: normal;
-    text-transform: none;
-    font-size: initial;
+    font-weight: normal !important;
+    text-transform: none !important;
+    font-size: initial !important;
 }
 body > div.container > div > div.three.columns > li > a{
     text-decoration: none;
