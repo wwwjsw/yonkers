@@ -19,13 +19,19 @@
     width: 100%;
 }
 @media all and (min-width: 40em) {
-    .lista_produtos .list-item {
+    .lista_produtos .list-item-100 {
         width: 100%;
+    }
+    .lista_produtos .list-item-33 {
+        width:33,666%;
     }
 }
 @media all and (min-width: 60em) {
-    .lista_produtos .list-item {
+    .lista_produtos .list-item-100 {
         width: 100%;
+    }
+    .lista_produtos .list-item-33 {
+        width:33,666%;
     }
 }
 .lista_produtos .list-content {
