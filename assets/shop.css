@@ -20,12 +20,12 @@
 }
 @media all and (min-width: 40em) {
     .lista_produtos .list-item {
-        width: 50%;
+        width: 100%;
     }
 }
 @media all and (min-width: 60em) {
     .lista_produtos .list-item {
-        width: 50%;
+        width: 100%;
     }
 }
 .lista_produtos .list-content {
