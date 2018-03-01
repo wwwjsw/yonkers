@@ -20,6 +20,11 @@
     font-size: 0.7em;
     letter-spacing: 0.1em;
 }
+.menu_item a{
+    font-weight: normal;
+    text-transform: none;
+    font-size: initial;
+}
 body > div.container > div > div.three.columns > li > a{
     text-decoration: none;
     color: #000000;
