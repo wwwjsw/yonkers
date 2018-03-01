@@ -23,7 +23,7 @@
         width: 100%;
     }
     .lista_produtos .list-item-33 {
-        width:33,666%;
+        width:33.33%;
     }
 }
 @media all and (min-width: 60em) {
@@ -31,7 +31,7 @@
         width: 100%;
     }
     .lista_produtos .list-item-33 {
-        width:33,666%;
+        width:33.33%;
     }
 }
 .lista_produtos .list-content {
