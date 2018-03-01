@@ -16,7 +16,7 @@
 }
 .lista_produtos .list-item {
     display: flex; 
-    width: 100%;
+    width: 33.33%;
 }
 @media all and (min-width: 40em) {
     .lista_produtos .list-item-100 {
