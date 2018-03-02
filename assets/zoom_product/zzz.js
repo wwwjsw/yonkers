@@ -107,7 +107,7 @@ var zzz = zzz || {};
     yTranslate = (wCenterY - iCenterY) / scaleRatio;
     xTranslate = (wCenterX - iCenterX) / scaleRatio;
 
-    i.style.transform = "scale("2.0") translateX(" + xTranslate + "px) translateY(" + yTranslate + "px)";
+    i.style.transform = "scale(200) translateX(" + xTranslate + "px) translateY(" + yTranslate + "px)";
     i.style.cursor = "zoom-out";
     i.style.zIndex = 2;
     i.parentNode.style.zIndex = 999; // Stacking context
