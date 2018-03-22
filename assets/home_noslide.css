@@ -111,9 +111,12 @@ body > div.container > div > div.three.columns > li > a{
         max-width: 100px;
     }
     .menu_superior ul li a{
-        font-size:0.7em !important;
+        font-size:1em !important;
     }
     .menu_superior ul{
         margin-top:40px !important;
+    }
+    .menu_superior ul li { 
+        margin-right: auto !important;
     }
 }
