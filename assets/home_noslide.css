@@ -99,3 +99,21 @@ body > div.container > div > div.three.columns > li > a{
     font-weight: 400;
     margin-bottom: 1rem;
 }
+@media only screen and (max-width: 600px) {
+    .menu{
+        text-align: center;
+    }
+    .menu hr{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin: 0 auto;
+        border-color: #000000;    
+        max-width: 100px;
+    }
+    .menu_superior ul li a{
+        font-size:0.7em !important;
+    }
+    .menu_superior ul{
+        margin-top:40px !important;
+    }
+}
