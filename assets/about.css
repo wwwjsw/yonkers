@@ -30,8 +30,9 @@
 .henrique{
     background-image: url('images/About3.png');
     background-position: center top;
+    background-repeat: no-repeat;
     background-size: 100% auto;
-    height: 300px;
+    height: 390px;
     padding-top: 100px;
     padding-left: 60px;
     padding-right: 270px;
@@ -39,8 +40,9 @@
 .marllon{
     background-image: url('images/About4.png');
     background-position: center top;
+    background-repeat: no-repeat;
     background-size: 100% auto;
-    height: 300px;
+    height: 490px;
     padding-left: 270px;
     padding-top: 140px;
 }
