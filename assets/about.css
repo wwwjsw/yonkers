@@ -46,3 +46,12 @@
     padding-left: 270px;
     padding-top: 140px;
 }
+@media only screen and (max-width: 600px) {
+    .henrique{
+        padding-left:0;
+        padding-right:0;
+    }
+    .marllon{
+        padding-left:0;
+    }
+}
