@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- MAIN STYLE
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/main.css">
+    <!-- INDEX 2 STYLE
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/home_noslide.css">
+    <!-- SHOP STYLES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/shop.css">
+    <!-- ABOUT STYLES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/about.css">
+    <!-- ABOUT STYLES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/product.css">
+    <!-- CART STYLES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/cart.css">
+    <!-- SKELETON
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/normalize.css">
+    <link rel="stylesheet" href="https://wwwjsw.github.io/yonkers/assets/skeleton.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+    <title>Yonkers</title>
+  </head>
+  <body>
+    <!--
+    HOME PAGE 2
+    -->
+    <div class="container">
+      <div class="row menu">
+        <div class="three columns">
+          <a href="{{store_url}}"><img src="https://wwwjsw.github.io/yonkers/assets/images/yonkers_logo.png" class="logo" alt="Yonkers"></a>
+            <li class="{{#if home_page}}selected{{/if}}">
+              <a href="{{store_url}}">início</a>
+            </li>
+            <hr align="left">
+            <li class="{{#if all_products_page}}selected{{/if}}">
+              <a href="{{products_url}}">loja</a>
+            </li>
+            <hr align="left">
+            {{#each pages}}
+            <li class=" {{#if is_current}}selected{{/if}} ">
+              <a href="{{url}}">{{title}}</a>
+            </li>
+            {{/each}}
+            <hr align="left">
+            {{#each categories}}
+            <li class="{{#if is_current}}selected{{/if}}">
+              <a  href="{{url}}">{{label}}</a>
+            </li>
+            {{/each}}
+          </ul>
+        </ul>
+      </div>
+      <div class="nine columns">
+        <div class="row menu_superior">
+          <ul>
+            <li class="menu_item {{#if is_current}}selected{{/if}} ">
+              <a href="https://yonkers.com.br/o_que_e_yonkers">SOBRE</a>
+            </li>
+            <li>|</li>
+            <li class="menu_item"><a href="">CONTATO</a></li>
+            <li>|</li>
+            <li class="menu_item {{#is_cart_page}}selected{{/is_cart_page}}">
+              <a href="{{cart_url}}">
+                CARRINHO
+                {{#if cart_has_items}}
+                ({{cart_count}})
+                {{/if}}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- home page -->
+        {{#home_page}} <!-- se for a página inicial -->
+        <div class="row lista_produtos">
+          <ul class="list">
+            <li class="list-item-100">
+              <div class="list-content">
+                <div class="product_image">
+                  <a href="https://yonkers.com.br/categorias/the-good-life">
+                    <img src="https://wwwjsw.github.io/yonkers/assets/images/big.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="list-item-33">
+              <div class="list-content">
+                <div class="product_image">
+                  <a href="https://yonkers.com.br/categorias/camisetas">
+                    <img src="https://wwwjsw.github.io/yonkers/assets/images/big_square1.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="list-item-33">
+              <div class="list-content">
+                <div class="product_image">
+                  <a href="https://yonkers.com.br/categorias/quadros">
+                    <img src="https://wwwjsw.github.io/yonkers/assets/images/big_square2.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="list-item-33">
+              <div class="list-content">
+                <div class="product_image">
+                  <a href="https://yonkers.com.br/art_gallery">
+                    <img src="https://wwwjsw.github.io/yonkers/assets/images/big_square3.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        {{/home_page}}
+        <!-- fim home page -->
+        <!-- pagina de produtos -->
+        {{#list_page}}
+        <div class="row lista_produtos">
+          {{#search_page}}<!-- se estiver numa página de resultado de busca -->
+          {{search_term}}<!-- exibe o termo que foi pesquisado  -->
+          {{/search_page}}
+          <ul class="list">
+            {{#each products}} <!-- faz um loop por todos produtos -->
+            <li class="list-item">
+              <div class="list-content">
+                <a href="{{url}}" class="product {{#if out_of_stock}}out_of_stock{{/if}}">
+                  <div class="product_image">
+                    {{#with primary_image}}
+                    <img src='{{resize_image this "340x340#"}}' data-at2x='{{resize_image this "340x340#"}}' alt="{{title}}">
+                    {{/with}}
+                  </div>
+                  <h2><a href="{{url}}">{{title}}</a></h2>
+                  <p>{{price_with_currency}}</p>
+                </a>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+          {{{paginate}}} <!-- retorna paginação dos produtos -->
+        </div>
+        {{/list_page}}
+        <!-- fim da pagina inicial -->
+        {{#o_que_e_yonkers_page}}
+        <div class="row lista-sobre">
+          <div class="twelve columns">
+            <img src="https://wwwjsw.github.io/yonkers/assets/images/About1.png">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non nisi rhoncus, elementum nisi at, convallis magna. Nunc mattis lectus ut malesuada egestas. Aliquam dapibus risus nibh, id eleifend metus ornare at. Nullam lacus libero, ornare a turpis eget, vulputate sollicitudin orci. Etiam ut velit at lacus fermentum sollicitudin. Praesent euismod magna eu faucibus dapibus. Donec sed tincidunt sem, et sagittis nisl. Nulla at purus purus. Etiam sed tellus eros. Maecenas scelerisque a velit non dapibus. Ut vitae ornare neque, vel aliquam augue. Donec mollis, risus quis semper scelerisque, risus mauris viverra diam, in vulputate magna ante in magna. Nullam eu odio varius, vulputate justo ac, molestie turpis.</p>
+            <hr>
+            <img src="https://wwwjsw.github.io/yonkers/assets/images/About2.png">
+          </div>
+          <div class="twelve columns henrique">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non nisi rhoncus, elementum nisi at, convallis magna. Nunc mattis lectus ut malesuada egestas. Aliquam dapibus risus nibh, id eleifend metus ornare at. Nullam lacus libero, ornare a turpis eget, vulputate sollicitudin orci.</p>
+          </div>
+          <div class="twelve columns marllon">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi non nisi rhoncus, elementum nisi at, convallis magna. Nunc mattis lectus ut malesuada egestas. Aliquam dapibus risus nibh, id eleifend metus ornare at. Nullam lacus libero, ornare a turpis eget, vulputate sollicitudin orci.</p>
+          </div>
+        </div>
+        {{/o_que_e_yonkers_page}}
+        {{#not_found_page}} <!-- se a página não existir -->
+        <div class="list_page">
+          <h1 class="information">
+          Página não encontrada
+          </h1>
+        </div>
+        {{/not_found_page}}
+        {{#art_gallery_page}}
+        <!--<iframe src="//widgets-code.websta.me/w/cd16eb299ba3?ck=MjAxOC0wMy0xNVQxNDo0MzoyNi4wMDBa" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:auto;height:2185px;width:660px;"></iframe> -->
+        <!-- WEBSTA WIDGETS - widgets.websta.me -->
+        <!-- InstaWidget -->
+        <!--<a href="https://instawidget.net/v/user/yonkersbrand" id="link-79b898f1ba91d020e3e0412bcef3e30a4922fea6238955fca2967a14ae2a49a2">@yonkersbrand</a>-->
+        <!--<script src="https://instawidget.net/js/instawidget.js?u=79b898f1ba91d020e3e0412bcef3e30a4922fea6238955fca2967a14ae2a49a2&width=700px"></script>-->
+        <!-- SnapWidget -->
+        <!--<script src="https://snapwidget.com/js/snapwidget.js"></script>-->
+        <div id="pixlee_container"></div><script type="text/javascript">window.PixleeAsyncInit = function() {Pixlee.init({apiKey:'vNzkyrzai30uc1yn8D2o'});Pixlee.addSimpleWidget({widgetId:'2595'});};</script><script src="//instafeed.assets.pixlee.com/assets/pixlee_widget_1_0_0.js"></script>
+        {{/art_gallery_page}}
+        <!-- pagina interna do produto -->
+        {{#product_page}}
+        <div class="row product">
+          {{#with product}}
+          <div class="seven columns">
+            <div class="product_cover">
+              {{#with primary_image}}
+              <img src="{{this}}" class="zzz" alt="{{title}}">
+              {{/with}}
+            </div>
+            <div class="product_thumbnail">
+              {{#each images}}
+              <img src="{{this}}" class="zzz" alt="{{title}}">
+              {{/each}}
+            </div>
+          </div>
+          <div class="five columns">
+            <h2>{{title}}</h2>
+            {{#add_to_cart}}
+            <p>{{price_with_currency}}</p>
+            <label for="variant">TAMANHO</label>
+            {{variations_select}}
+            {{#add_to_cart_button}}
+            Adicionar ao Carrinho
+            {{/add_to_cart_button}}
+            
+          </div>
+          <div class="twelve columns product_desc">
+            {{{description}}}
+          </div>
+          {{/add_to_cart}}
+        </div>
+      </div>
+      
+      
+      <!--{{url}} product share url -->
+      {{/with}}
+      {{/product_page}}
+      <!-- fim da pagina interna do produto -->
+      <!-- CARRINHO -->
+      {{#cart_page}}
+      <div class="row cart">
+        {{#with cart}}
+        {{#cart_form_tag}}
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Remover</th>
+            </tr>
+          </thead>
+          <!--
+          
+          <tr>
+            <td>Dave Gamache</td>
+            <td>26</td>
+            <td>Male</td>
+            <td>San Francisco</td>
+          </tr>
+          -->
+          <tbody>
+            {{#each line_items}}
+            <tr>
+              <td>{{#link_to_product}}{{title}}{{/link_to_product}}</td>
+              <td>de:   {{unit_price_without_discount}}
+              por:  {{unit_price}}</td>
+              <td>{{quantity_input_field}}</td>
+              <td>{{#remove_line_item_link}}Remover{{/remove_line_item_link}}</td>
+            </tr>
+            
+            {{/each}}
+          </tbody>
+        </table>
+        <!--
+        {{shipping_fields}}
+        {{#if is_shipping_calculated}}
+        {{shipping_price}}
+        {{/if}}
+        {{#if has_discount}}
+        {{subtotal_price}}
+        {{total_discount_price}}
+        {{/if}}
+        -->
+        <div class="offset-by-six six columns">
+          Total:{{total_price}}
+          {{#submit_cart_form_tag}}{{/submit_cart_form_tag}}
+        </div>
+        {{/cart_form_tag}}
+        {{/with}}
+        <div class="offset-by-six six columns">
+          <span>{{information}}</span><br>
+          <span>{{minestore_messages}}</span>
+        </div>
+      </div>
+      {{/cart_page}}
+      <!-- FIM CARRINHO -->
+    </div>
+  </div>
+</div>
+<footer class="u-full-width footer_scroll">
+  <form>
+    <div class="row footer_linha">
+      <div class="twelve columns">
+        <hr>
+      </div>
+    </div>
+    <div class="container"></div>
+    <div class="footer_form">
+      <span>PESQUISA</span>
+      {{{search_form}}}
+      <!-- <i id="search-button" class="fa fa-search"></i> -->
+    </div>
+    <div class="row">
+      <p class="footer_credit">©2017 Yonkers. Todos os direitos reservados.</p>
+    </div>
+  </form>
+</footer>
+<script src="https://wwwjsw.github.io/yonkers/assets/zoom_product/zzz.js"></script>
+<script>zzz.init("#fafafa");</script>
+<script type="text/javascript" src="https://wwwjsw.github.io/yonkers/assets/instafeed/instafeed.min.js"></script>
+</body>
+</html>
